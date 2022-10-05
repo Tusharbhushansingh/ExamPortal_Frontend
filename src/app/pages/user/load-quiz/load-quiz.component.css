@@ -1,0 +1,17 @@
+.truncate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.example-header-image {
+    background-image: url("../../../../assets/quizzes.png");
+    background-size: cover;
+  }
+
+
+  .button{
+    background-color: rgb(243, 211, 29)
+}

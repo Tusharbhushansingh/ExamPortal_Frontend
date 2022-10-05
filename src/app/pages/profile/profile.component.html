@@ -1,0 +1,49 @@
+<mat-card>
+    <marquee behavior="alternate" direction="right">
+    <h1 class="font">Your Profile Details</h1>
+    </marquee>
+    <mat-card-content>
+            <div class="bootstrap-wrapper">
+                <div class="container">
+                    <div class="container text-center">
+                        <!-- image -->
+                        <img src="https://media.istockphoto.com/vectors/flat-white-icon-man-for-web-design-silhouette-flat-illustration-vector-id1393750072?k=20&m=1393750072&s=612x612&w=0&h=w8zIjAmTEitSNYR3KBkZgF16IHglC6gyO067LOwSGpc=" 
+                        alt=""
+                        class="profile-img">
+                        <h1 class="mt20">{{ user.firtsname }} {{user.lastname}}</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <!-- Table details -->
+                            <table class="table text-center">
+                                <tr>
+                                    <td>Username</td>
+                                    <td>{{user.username}}</td>
+                                </tr>
+                                <tr>
+                                    <td>User Id</td>
+                                    <td>{{user.id}}</td>
+                                </tr>
+                                <tr *ngIf="user.phone">
+                                    <td>Phone</td>
+                                    <td>{{user.phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Role</td>
+                                    <td>{{user.authorities[0].authority}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>{{user.enabled?"ACTIVE":"NOT-ACTIVE"}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>

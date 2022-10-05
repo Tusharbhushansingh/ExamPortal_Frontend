@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .icon-display {
+    height: 50px ;
+    width: 50px;
+ }
+
+  .bg-color-whatever {background-color: rgb(243, 211, 29)}

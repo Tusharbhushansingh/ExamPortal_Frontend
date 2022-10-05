@@ -1,0 +1,7 @@
+.button{
+    background-color: rgb(243, 211, 29)
+}
+
+.uploader-status ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #000000;
+}
