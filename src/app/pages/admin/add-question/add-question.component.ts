@@ -15,6 +15,8 @@ export class AddQuestionComponent implements OnInit {
   public Editor = ClassicEditor;
   qid:any;
   title:any;
+  chosenfile:any = false;
+  file:any;
   questions:any = {
     quiz:{
 
@@ -42,6 +44,22 @@ export class AddQuestionComponent implements OnInit {
   }
 
   public addQuestion(){
+
+    if(this.chosenfile == true){
+      this.chosenfile = false;
+      let formData = new FormData();
+      formData.append('file',this.file);
+      this._question.addQuestionByExcel(formData,this.qid).subscribe(
+        (data:any)=>{
+          Swal.fire('Success !!','Questions are added successfully','success');
+          this._router.navigate(['/admin-dashboard/view-questions/'+this.qid+'/'+this.title]);
+        },
+        (error)=>{
+          Swal.fire('Error !!','Server error !!','error');
+        }
+      );
+    }
+
     if(this.questions.content.trim()=='' || this.questions.content==null){
       this._snack.open("Content required !!", '',{
         duration:3000
@@ -96,6 +114,11 @@ export class AddQuestionComponent implements OnInit {
         Swal.fire('Error !!','Server error !!','error');
       }
     );
+  }
+
+  selectFile(event:any){
+    this.chosenfile=true;
+    this.file = event.target.files[0];
   }
 
 }

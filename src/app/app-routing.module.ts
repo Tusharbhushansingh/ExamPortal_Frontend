@@ -10,8 +10,11 @@ import { ViewCatorgiesComponent } from './pages/admin/view-catorgies/view-catorg
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { OtpVerifyComponent } from './pages/otp-verify/otp-verify.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
@@ -36,6 +39,21 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent,
+    pathMatch:'full',
+  },
+  {
+    path:'forgetpassword',
+    component:ForgetPasswordComponent,
+    pathMatch:'full',
+  },
+  {
+    path:'otpverify/:email',
+    component:OtpVerifyComponent,
+    pathMatch:'full',
+  },
+  {
+    path:'changepassword/:email',
+    component:ChangePasswordComponent,
     pathMatch:'full',
   },
   {

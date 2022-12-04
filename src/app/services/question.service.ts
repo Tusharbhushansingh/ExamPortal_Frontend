@@ -43,5 +43,10 @@ export class QuestionService {
     public evalQuiz(question:any){
       return this._http.post(`${baseUrl}/question/eval-quiz`,question);
     }
+
+    //add question using excel
+    public addQuestionByExcel(formData:any, quizId:any){
+      return this._http.post(`${baseUrl}/question/upload/${quizId}`,formData);
+    }
   
 }

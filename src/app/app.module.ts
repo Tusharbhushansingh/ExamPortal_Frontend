@@ -43,6 +43,9 @@ import { QuizInstructionsComponent } from './pages/user/quiz-instructions/quiz-i
 import { QuizStartComponent } from './pages/user/quiz-start/quiz-start.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
+import { OtpVerifyComponent } from './pages/otp-verify/otp-verify.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
     LoadQuizComponent,
     LoadSpecificQuizComponent,
     QuizInstructionsComponent,
-    QuizStartComponent
+    QuizStartComponent,
+    ForgetPasswordComponent,
+    OtpVerifyComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

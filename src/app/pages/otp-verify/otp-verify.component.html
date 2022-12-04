@@ -1,0 +1,34 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 180px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/signup logo.png" alt="signup logo" class="src">
+                </div>
+
+                <h1 class="text-center">Verify Otp </h1>
+
+                <form (ngSubmit)="formSubmit()">
+                    <!-- Username field -->
+                    <mat-form-field class = "full-width" appearance="outline">
+                        <mat-label>Enter the Otp!!</mat-label>
+                        <input
+                        [(ngModel)]="otp"
+                        type="number"
+                        name="otp"
+                        required 
+                        matInput placeholder="Enter the otp!!">
+                      </mat-form-field>
+
+
+                    <div class="container text-center mt20">
+                        <button type="submit" mat-raised-button color="primary" >Verify Otp</button>
+                    </div>
+                </form>
+            </mat-card>
+            </div>   
+        </div>
+    </div>
+</div>
